@@ -9,6 +9,7 @@ import javax.persistence.*;
 
 public class Author {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="AUTHOR_ID")
     private Long authorId;
     @Column(name="AUTHOR_NAME")
@@ -16,7 +17,7 @@ public class Author {
     @Column(name="PHONE_NUMBER")
     private int phoneNumber;
 
-    public Author(Long authorId, String authorName, int phoneNumber) {
+    public Author(String authorName, int phoneNumber) {
         this.authorId = authorId;
         this.authorName = authorName;
         this.phoneNumber = phoneNumber;
