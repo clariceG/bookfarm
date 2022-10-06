@@ -1,6 +1,5 @@
-package com.apps.bookfarm.Book;
+package com.apps.bookfarm.Exception;
 
-import com.apps.bookfarm.Author.AuthorNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -8,11 +7,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ControllerAdvice
- class BookNotFoundAdvice {
+class AuthorNotFoundAdvice {
     @ResponseBody
-    @ExceptionHandler(BookNotFoundException.class)
+    @ExceptionHandler(AuthorNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    String bookNotFoundHandler(BookNotFoundException ex){
+    String authorNotFoundHandler(AuthorNotFoundException ex){
         return ex.getMessage();
     }
 }

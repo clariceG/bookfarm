@@ -1,6 +1,6 @@
-package com.apps.bookfarm.Book;
+package com.apps.bookfarm.Model;
 
-import com.apps.bookfarm.Author.Author;
+import com.apps.bookfarm.Model.Author;
 
 import javax.persistence.*;
 
@@ -14,7 +14,7 @@ public class Book {
     private Long bookId;
     @Column(name="BOOK_TITLE")
     private String title;
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name="AUTHOR_ID")
     private Author author;
     @Column(name="BOOK_PUBLISHER")

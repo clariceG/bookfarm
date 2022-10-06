@@ -1,4 +1,4 @@
-package com.apps.bookfarm.Author;
+package com.apps.bookfarm.Model;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
@@ -18,7 +18,7 @@ public class Author {
     private int phoneNumber;
 
     public Author(String authorName, int phoneNumber) {
-        this.authorId = authorId;
+
         this.authorName = authorName;
         this.phoneNumber = phoneNumber;
     }
